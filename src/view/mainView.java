@@ -24,6 +24,12 @@ public class mainView extends javax.swing.JFrame {
         initComponents();
         form_mahasiswa.setVisible(false);
         table_mahasiswa.setVisible(false);
+        
+        try {
+            this.showData();
+        } catch (Exception ex) {
+            System.out.println("Error");
+        }
     }
     
     public void showData() throws Exception {
@@ -132,9 +138,7 @@ public class mainView extends javax.swing.JFrame {
 
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"10102102", "Ujang Komarudin", "80", "A"},
-                {"10102103", "HENDRA DEDI SUPRIADI", "51", "C"},
-                {"10102104", "Willy Samuel", "87", "A"}
+
             },
             new String [] {
                 "NIM", "Nama", "Nilai", "Indeks"
